@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="head-container"><h1 class="head">RESUME BUILDER </h1>
+      <p class="head">BY MEHAK SHAH</p></div>
+    
+    <form id="Resumeform">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="photo-section">
+          <label for="photo-upload">Upload Photo:</label>
+          <input type="file" id="photo-upload" accept="image/*" />
+          <img id="photo-preview" alt="Your Photo" />
+        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <br /><br />
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" required />
+        <br /><br />
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" required />
+        <br /><br />
+        <label for="CNIC">CNIC NO:</label>
+        <input type="text" id="CNIC" required />
+        <br /><br />
+        <label for="Gmail">Gmail:</label>
+        <input type="text" id="Gmail" required />
+        <br /><br />
+        <fieldset id="about-me-fieldset">
+          <legend>About Me</legend>
+          <textarea id="about-me" name="about-me" rows="8"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Social Links</legend>
+          <label for="linkedin-link">LinkedIn:</label>
+          <input type="text" id="linkedin-link" placeholder="Enter LinkedIn URL" />
+          <label for="facebook-link">Facebook:</label>
+          <input type="text" id="facebook-link" placeholder="Enter Facebook URL" />
+          <label for="github-link">GitHub:</label>
+          <input type="text" id="github-link" placeholder="Enter GitHub URL" />
+          <label for="instagram-link">Instagram:</label>
+          <input type="text" id="instagram-link" placeholder="Enter Instagram URL" />
+        </fieldset>
+      </fieldset>
+
+      <fieldset id="education-fieldset">
+        <legend>Education</legend>
+        <textarea id="education" name="education" rows="5"></textarea>
+      </fieldset>
+
+      <fieldset id="skills-fieldset">
+        <legend>Skills</legend>
+        <input type="text" id="skill-input" placeholder="Enter a skill" />
+        <button type="button" id="add-skill-button">Add Skill</button>
+        <ul id="skills-list"></ul>
+      </fieldset>
+
+      <fieldset id="experience-fieldset">
+        <legend>Work Experience</legend>
+        <textarea id="experience" name="experience" rows="5"></textarea>
+      </fieldset>
+
+      <button type="button" id="toggle-education">Hide Education</button>
+      <button type="button" id="toggle-skills">Hide Skills</button>
+      <button type="button" id="toggle-experience">Hide Experience</button>
+      <br />
+      <button type="button" id="generate-button">Generate Resume</button>
+    </form>
+
+    <div id="resume-template" style="display: none">
+      <div id="main">
+        <div class="left-side">
+          <div class="Profile">
+            <div class="photo">
+              <img id="resume-photo" src="" alt="Photo" />
+            </div>
+            <div class="bio">
+              <h1 id="resume-name">NAME</h1>
+              <h2 id="resume-profession">Profession</h2>
+            </div>
+          </div>
+          <div class="intro-section-contact">
+            <h2 class="title">Contact</h2>
+            <div class="info-section">
+              <p id="resume-contact">Contact Info</p>
+              <h2>Email</h2>
+              <p id="resume-email">Email Info</p>
+              <h2>CNIC NO</h2>
+              <p id="resume-cnic">CNIC Info</p>
+            </div>
+          </div>
+          <div class="info-section link">
+            <h2>Follow Me</h2>
+            <p><a href="#" id="resume-linkedin" target="_blank">LinkedIn</a></p>
+            <p><a href="#" id="resume-facebook" target="_blank">Facebook</a></p>
+            <p><a href="#" id="resume-github" target="_blank">GitHub</a></p>
+            <p><a href="#" id="resume-instagram" target="_blank">Instagram</a></p>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="education-section">
+            <h2>Education</h2>
+            <p id="resume-education">Education Info</p>
+          </div>
+          <div class="intro-section about">
+            <h2 class="title">About Me</h2>
+            <p id="resume-about">About Info</p>
+          </div>
+          <div class="skills-section">
+            <h2>Skills</h2>
+            <ul id="resume-skills"></ul>
+          </div>
+          <div id="experience-section">
+            <h2>Experience</h2>
+            <p id="resume-experience">Experience Info</p>
+          </div>
+        </div>
+      </div>
+      <button id="edit-button" style="display: none;">Edit</button>
+    <button id="download-button" style="display: none;">Download</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,330 @@
+
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #d3eaea;
+}
+
+form {
+  max-width: 600px;
+  margin: 70px;
+  background-color: #aeb6c4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  border: 1px solid #3e477b;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+legend,
+label {
+  font-weight: bold;
+  font-size: larger;
+  color: #12055c;
+}
+
+input[type="text"],
+textarea {
+  width: calc(100% - 20px); /* Ensure it fits inside its container */
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #02021d;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow-wrap: break-word; /* Break long words onto the next line */
+  word-wrap: break-word; /* For older browsers */
+  white-space: normal; /* Allow text to wrap naturally */
+}
+
+.photo-section {
+  margin-bottom: 15px;
+}
+
+#photo-preview {
+  display: none;
+  margin-top: 10px;
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+button {
+  background-color: cadetblue;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#generate-button {
+  background-color: #3e477b;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+}
+
+#resume-display {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  color: rgb(39, 35, 35);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Container */
+#main {
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Set to 100% to ensure full width is used */
+  max-width: 1200px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  overflow: hidden; /* Prevent overflow from child elements */
+}
+
+.left-side,
+.right-side {
+  padding: 20px;
+  overflow-wrap: break-word; /* Ensure content doesn't overflow */
+}
+
+/* Left Side (Profile and Contact Info) */
+.left-side {
+  box-shadow: 10px 0px 20px rgba(16, 98, 146, 0.2);
+  width: 250px;
+  height: auto;
+  color: white;
+  flex-shrink: 0; /* Prevent shrinking */
+  max-width: 250px; /* Ensure it stays at a fixed width */
+}
+
+/* Profile Styling */
+.Profile {
+  text-align: left;
+  padding: 30px;
+  background-color: rgb(19, 57, 128);
+  height: auto;
+  width: 250px;
+}
+
+.Profile .photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.bio {
+  text-align: left;
+  margin-top: 8px;
+}
+
+.bio .name {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.bio #profession {
+  font-size: 18px;
+  font-style: italic;
+  color: white;
+}
+
+/* Contact Section */
+.intro-section-contact h2 {
+  font-size: 20px;
+  margin: 20px;
+  color: #212fa7;
+  text-decoration: underline;
+  padding-top: 20px;
+}
+
+.info-section p {
+  font-size: 20px;
+  color: #464549;
+  text-align: center;
+}
+
+/* Links Section */
+.info-section.link h2 {
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 10px;
+  color: #212fa7;
+  text-decoration: underline;
+}
+
+.info-section.link a {
+  text-decoration: none;
+  color: #0073e6;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.info-section.link a:hover {
+  text-decoration: underline;
+}
+
+/* Right Side (Education, About, Skills, Experience) */
+.right-side {
+  padding-left: 40px;
+  margin: 20px;
+  padding-top: 30px;
+  width: 800px;
+}
+
+/* Education Section */
+.education-section h2,
+.about .title,
+.skills-section h2,
+#experience-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #e6e9fa;
+  background: #3e477b;
+}
+
+#resume-education,
+#paragraph,
+#resume-experience {
+  font-size: 16px;
+  color: rgb(39, 35, 35);
+  padding: 20px;
+}
+
+/* Skills Section */
+.skills-section ul {
+  list-style-type: none;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.skills-section li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* General styling for spacing and alignment */
+h1,
+h2,
+p {
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+
+#resume-photo {
+  max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.right-side,
+.left-side {
+  overflow: hidden; /* Prevent child elements from overflowing */
+  height: auto;
+}
+
+/* Download button */
+#edit-button,
+#download-button {
+  background-color: #3e477b;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#edit-button:hover,
+#download-button:hover {
+  background-color: #333;
+}
+
+#resume-display {
+  width: 595px; /* Fixed width matching A4 */
+  max-width: 595px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Print Styling for PDF Generation */
+@media print {
+  #main {
+    display: block; /* Remove flex display for print */
+    width: 100%;
+  }
+  /* Print Styling */
+
+  h1, p {
+    margin-top: 0;
+    padding-top: 0;
+    order: -1;  /* Ensure h1 or p are at the top */
+  }
+
+
+
+  .left-side {
+    box-shadow: 10px 0px 20px rgba(16, 98, 146, 0.2) !important;
+    width: 250px !important; /* Force fixed width in print */
+    max-width: 250px !important;
+    flex-shrink: 0 !important; /* Prevent shrinking */
+  }
+
+  .right-side {
+    width: calc(
+      100% - 250px
+    ) !important; /* Adjust right side to take remaining space */
+  }
+
+  #resume-display {
+    width: 595px !important; /* Ensure fixed width for PDF */
+  }
+}
